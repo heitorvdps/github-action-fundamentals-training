@@ -12,9 +12,14 @@ jobs:
     name : Build
     runs-on : ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name : log
         run: |
-          echo "Branch: ${{github.event}}" 
-          echo "Branch: ${{github.ref}}" 
+          echo "Branch: ${{github.event_name}}" 
+          echo "Branch: ${{github.ref_name}}" 
+          echo "Files:"
+          git ls-files
+          
   
   
