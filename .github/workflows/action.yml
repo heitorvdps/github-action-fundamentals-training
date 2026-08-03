@@ -1,4 +1,4 @@
-name: My second workflow [skip ci]
+name: My second workflow
 
 on:
   workflow_dispatch:
@@ -22,4 +22,4 @@ jobs:
           who-to-greet: ${{ inputs.who-to-greet }}
       - name : log-time
         run: |
-          echo Time : {{steps.print-to-log.time}}
+          echo Time : ${{steps.print-to-log.outputs.time}}
