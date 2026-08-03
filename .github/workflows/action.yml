@@ -1,4 +1,4 @@
-name: Example Workflow
+name: My second workflow [skip ci]
 
 on:
   workflow_dispatch:
