@@ -14,11 +14,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print to Log
-        id: print-to-log
+      - name: docker-hello-world
+        id: docker-hello-world
         uses: actions/hello-world-docker-action@main
         with:
           who-to-greet: ${{ inputs.who-to-greet }}
       - name : log-time
         run: |
-          echo Time : ${{steps.print-to-log.outputs.time}}
+          echo "Time : ${{steps.docker-hello-world.outputs.time}}"
